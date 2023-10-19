@@ -1,0 +1,19 @@
+class Question:
+    def _init_(self, prompt, correct_answer, choices):
+        self.prompt = prompt
+        self.correct_answer = correct_answer
+        self.choices = choices
+
+questions = [
+    Question("What is the capital of France?\n(a) Paris\n(b) London\n(c) Berlin\n(d) Madrid\n", "a", ["a", "b", "c", "d"]),
+    Question("Which planet is known as the Red Planet?\n(a) Mars\n(b) Jupiter\n(c) Venus\n(d) Saturn\n", "a", ["a", "b", "c", "d"]),
+    Question("What is the largest mammal in the world?\n(a) Elephant\n(b) Blue Whale\n(c) Giraffe\n(d) Gorilla\n", "b", ["a", "b", "c", "d"])
+]
+
+def run_quiz(questions):
+    score = 0
+    for question in questions:
+        print(question.prompt)
+        for choice in question.choices:
+            print(choice)
+        …
